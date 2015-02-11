@@ -1,0 +1,28 @@
+{
+  "name": "GridBot",
+  "version": "0.0.1",
+  "authors": [
+    "Greg Walden <greg.walden@makerbot.com> (http://gsw.nyc)"
+  ],
+  "description": "Clean and customizable responsive grid CSS framework, built with LESS.",
+  "main": "gridbot.css",
+  "keywords": [
+    "css",
+    "framework",
+    "less",
+    "responsive",
+    "grid"
+  ],
+  "license": "MIT",
+  "homepage": "http://gridbot.makerbot.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}

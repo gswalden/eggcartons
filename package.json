@@ -1,0 +1,16 @@
+{
+  "name": "GridBot",
+  "version": "0.0.1",
+  "description": "Clean and customizable responsive grid CSS framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Greg Walden <greg.walden@makerbot.com> (http://gsw.nyc)",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-less": "^2.0.1"
+  }
+}

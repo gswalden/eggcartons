@@ -1,0 +1,71 @@
+.makeGrid(@prefix) {
+    .@{prefix}container {
+        position: relative;
+        width: 100%;
+        // max-width: 960px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .@{prefix}row {
+        font-size: 0;
+    }
+    @postfix: -col;
+    [class$=@{postfix}] {
+        display: inline-block;
+        box-sizing: border-box;
+        margin-left: 4%;
+        font-size: 1rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .columns(@size) {
+        .@{prefix}1@{postfix}@{size}       { width: 4.66666666667%; }
+        .@{prefix}2@{postfix}@{size}       { width: 13.3333333333%; }
+        .@{prefix}3@{postfix}@{size}       { width: 22%;            }
+        .@{prefix}4@{postfix}@{size}       { width: 30.6666666667%; }
+        .@{prefix}5@{postfix}@{size}       { width: 39.3333333333%; }
+        .@{prefix}6@{postfix}@{size}       { width: 48%;            }
+        .@{prefix}7@{postfix}@{size}       { width: 56.6666666667%; }
+        .@{prefix}8@{postfix}@{size}       { width: 65.3333333333%; }
+        .@{prefix}9@{postfix}@{size}       { width: 74.0%;          }
+        .@{prefix}10@{postfix}@{size}      { width: 82.6666666667%; }
+        .@{prefix}11@{postfix}@{size}      { width: 91.3333333333%; }
+        .@{prefix}12@{postfix}@{size}      { width: 100%; margin-left: 0; }
+
+        .@{prefix}1-3@{postfix}@{size}     { width: 30.6666666667%; }
+        .@{prefix}2-3@{postfix}@{size}     { width: 65.3333333333%; }
+
+        .@{prefix}1-2@{postfix}@{size}     { width: 48%; }
+
+        /* Offsets */
+        .@{prefix}off-0@{postfix}@{size}   { margin-left: 0; }
+        .@{prefix}off-1@{postfix}@{size}   { margin-left: 8.66666666667%; }
+        .@{prefix}off-2@{postfix}@{size}   { margin-left: 17.3333333333%; }
+        .@{prefix}off-3@{postfix}@{size}   { margin-left: 26%;            }
+        .@{prefix}off-4@{postfix}@{size}   { margin-left: 34.6666666667%; }
+        .@{prefix}off-5@{postfix}@{size}   { margin-left: 43.3333333333%; }
+        .@{prefix}off-6@{postfix}@{size}   { margin-left: 52%;            }
+        .@{prefix}off-7@{postfix}@{size}   { margin-left: 60.6666666667%; }
+        .@{prefix}off-8@{postfix}@{size}   { margin-left: 69.3333333333%; }
+        .@{prefix}off-9@{postfix}@{size}   { margin-left: 78.0%;          }
+        .@{prefix}off-10@{postfix}@{size}  { margin-left: 86.6666666667%; }
+        .@{prefix}off-11@{postfix}@{size}  { margin-left: 95.3333333333%; }
+
+        .@{prefix}off-1-3@{postfix}@{size} { margin-left: 34.6666666667%; }
+        .@{prefix}off-2-3@{postfix}@{size} { margin-left: 69.3333333333%; }
+
+        .@{prefix}off-1-2@{postfix}@{size} { margin-left: 52%; }
+    }
+    .columns(~'');
+    @media (min-width: 768px) {
+        .columns(-md);
+    }
+    @media (min-width: 992px) {
+        .columns(-lg);
+    }
+}
+.makeGrid(gb-); // ~'' for no prefix
