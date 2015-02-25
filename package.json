@@ -1,6 +1,6 @@
 {
   "name": "GridBot",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Clean and customizable responsive grid CSS framework.",
   "main": "index.js",
   "scripts": {
